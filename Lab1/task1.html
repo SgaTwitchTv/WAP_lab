@@ -4,6 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Programming Course</title>
+
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid blAck;
+                padding: 6px;
+            }
+
+            tfoot, td {
+                text-align: center;
+            }
+        </style>
     </head>
     
     <body>
@@ -14,6 +29,7 @@
                 <a href="#resources">Resources</a>
                 <a href="#about">About</a>
                 <a href="#images">Images</a>
+                <a href="#table">Table</a>
             </nav>
         </header>
 
@@ -76,7 +92,51 @@
                     <br>
                     to mialo byc logo skidsnslides w necie xd
                 </p>
-                
+            </section>
+
+            <section id="table">
+                <table>
+                    <caption>Table 1 - Simple table</caption>
+
+                    <colgroup>
+                        <col span="4">
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Coulum 1</th>
+                            <th scope="col">Coulum 2</th>
+                            <th scope="col">Coulum 3</th>
+                            <th scope="col">Coulum 4</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Cell 11</td>
+                            <td colspan="3" rowspan="2">
+                                <img src="https://www.mchtr.pw.edu.pl/var/www_mchtr/storage/images/witamy/47118-4-pol-PL/Witamy.jpg" width="200" height="80">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Cell 21</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cell 31</td>
+                            <td>Cell 32</td>
+                            <td>Cell 33</td>
+                            <td>Cell 34</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" rowspan="1">Foota</td>
+                        </tr>
+                    </tfoot>
+                </table>
             </section>
         </main>
 
