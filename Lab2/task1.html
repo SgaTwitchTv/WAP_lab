@@ -20,12 +20,12 @@
 
                 <div>
                     <label for="emali-address">Email address:</label>
-                    <input type="text" id="emali-address" name="email_address" placeholder="Wprowadź email">
+                    <input type="email" id="emali-address" name="email_address" placeholder="Wprowadź email">
                 </div>
 
                 <div>
                     <label for="phone-number">Phone number:</label>
-                    <input type="number" id="phone-number" name="phone_number" placeholder="Wprowadź numer telefonu">
+                    <input type="tel" id="phone-number" name="phone_number" placeholder="Wprowadź numer telefonu">
                 </div>
 
                 <div>
@@ -35,7 +35,7 @@
 
                 <div>
                     <label for="password">Password</label>
-                    <input type="text" id="password" name="password" placeholder="Min 8 characters">
+                    <input type="password" id="password" name="password" placeholder="Min 8 characters">
                 </div>
 
                 <div>
@@ -57,11 +57,12 @@
                 <div>
                     <label for="price">Price</label>
                     <input type="range" id="price" name="price" placeholder="Price">
+                    <output for="price">...</output>
                 </div>
 
                 <div>
                     <label for="description">Desctiprion</label>
-                    <input type="text" id="desctiprion" name="description" placeholder="Desctiprion" width="200" height="150">
+                    <textarea id="description" name="description" rows="5" cols="30"></textarea>
                 </div>
 
                 <div>
@@ -76,18 +77,18 @@
                 <p>Warranty period</p>
                 <div style="display: flex; gap: 16px;">
                     <div>
-                        <input type="radio" id="12months" name="12months" placeholder="12 months">
+                        <input type="radio" id="12months" name="warranty_period" placeholder="12 months" value="12">
                         <label for="12months">12 months</label>
                     </div>
                     <div>
-                        <input type="radio" id="24months" name="24months" placeholder="24 months">
+                        <input type="radio" id="24months" name="warranty_period" placeholder="24 months" value="24">
                         <label for="24months">24 months</label>
                     </div>
                 </div>
                 
                 <div>
                     <label for="product-photo">Product photo</label>
-                    <input type="button" id="product-photo" name="product_photo" placeholder="Product photo" value="Wybierz plik">
+                    <input type="file" id="product-photo" name="product_photo" placeholder="Product photo" value="Wybierz plik">
                 </div>
 
                 <div>
@@ -106,11 +107,11 @@
 
                 <div style="display: flex; gap: 16px;">
                     <div>
-                        <input type="button" id="reset" name="reset" placeholder="Reset" value="Reset">
+                        <button type="reset">Reset</button>
                     </div>
 
                     <div>
-                        <input type="button" id="submit" name="submit" placeholder="Submit" value="Submit">
+                        <button type="submit">Submit</button>
                     </div>
 
                     <div>
