@@ -13,69 +13,72 @@
 
         <main>
             <form method="post" enctype="multipart/form-data">
-                <div>
-                    <label for="full-name">Full name:</label>
-                    <input type="text" id="full-name" name="full_name" placeholder="Wprowadź nazwę">
-                </div>
-
-                <div>
-                    <label for="emali-address">Email address:</label>
-                    <input type="email" id="emali-address" name="email_address" placeholder="Wprowadź email">
-                </div>
-
-                <div>
-                    <label for="phone-number">Phone number:</label>
-                    <input type="tel" id="phone-number" name="phone_number" placeholder="Wprowadź numer telefonu">
-                </div>
-
-                <div>
-                    <input type="checkbox" id="create-account" name="create_account" placeholder="Create an account">
-                    <label for="create-account">Create an account</label>
-                </div>
-
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Min 8 characters">
-                </div>
-
-                <div>
-                    <label for="product-type">Product type</label>
-                    <select id="product-type" name="product_type">
-                        <option value="">- Choose a product type -</option>
-                        <optgroup label="Electronics">
-                            <option value="phone">Phone</option>
-                            <option value="laptop">Laptop</option>
-                        </optgroup>
-
-                        <optgroup label="Fashion">
-                            <option value="clothing">Clothing</option>
-                            <option value="footwear">Footwear</option>
-                        </optgroup>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="price">Price</label>
-                    <input type="range" id="price" name="price" placeholder="Price">
-                    <output for="price">...</output>
-                </div>
-
-                <div>
-                    <label for="description">Desctiprion</label>
-                    <textarea id="description" name="description" rows="5" cols="30"></textarea>
-                </div>
-
-                <div>
-                    <label for="marker">Marker</label>
-                    <select id="marker" name="marker">
-                        <option value="">e.g. Apple</option>
-                        <option value="apple">Apple</option>
-                        <option value="samsung">Samsung</option>
-                    </select>
-                </div>
-
                 <fieldset>
-                    <legend>Warranty period</legend>
+                    <legend>Personal info</legend>
+                    <div>
+                        <label for="full-name">Full name:</label>
+                        <input type="text" id="full-name" name="full_name" placeholder="Wprowadź nazwę">
+                    </div>
+
+                    <div>
+                        <label for="emali-address">Email address:</label>
+                        <input type="email" id="emali-address" name="email_address" placeholder="Wprowadź email">
+                    </div>
+
+                    <div>
+                        <label for="phone-number">Phone number:</label>
+                        <input type="tel" id="phone-number" name="phone_number" placeholder="Wprowadź numer telefonu">
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="create-account" name="create_account" placeholder="Create an account">
+                        <label for="create-account">Create an account</label>
+                    </div>
+
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Min 8 characters">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Product info</legend>
+                    <div>
+                        <label for="product-type">Product type</label>
+                        <select id="product-type" name="product_type">
+                            <option value="">- Choose a product type -</option>
+                            <optgroup label="Electronics">
+                                <option value="phone">Phone</option>
+                                <option value="laptop">Laptop</option>
+                            </optgroup>
+
+                            <optgroup label="Fashion">
+                                <option value="clothing">Clothing</option>
+                                <option value="footwear">Footwear</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="price">Price</label>
+                        <input type="range" id="price" name="price" placeholder="Price">
+                        <output for="price">...</output>
+                    </div>
+
+                    <div>
+                        <label for="description">Desctiprion</label>
+                        <textarea id="description" name="description" rows="5" cols="30"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="marker">Marker</label>
+                        <select id="marker" name="marker">
+                            <option value="">e.g. Apple</option>
+                            <option value="apple">Apple</option>
+                            <option value="samsung">Samsung</option>
+                        </select>
+                    </div>
+
+                    <p>Warranty period</p>
                     <div style="display: flex; gap: 16px;">
                         <div>
                             <input type="radio" id="12months" name="warranty_period" placeholder="12 months" value="12">
@@ -86,41 +89,43 @@
                             <label for="24months">24 months</label>
                         </div>
                     </div>
+                    
+                    <div>
+                        <label for="product-photo">Product photo</label>
+                        <input type="file" id="product-photo" name="product_photo" placeholder="Product photo" value="Wybierz plik">
+                    </div>
+
+                    <div>
+                        <label for="purchased-date">Purchased date</label>
+                        <input type="date" id="purchased-date" name="purchased_date" placeholder="Purchased date">
+                    </div>
+
+                    <div>
+                        <label for="tags">Tags:</label>
+                        <select id="tags" name="tags" multiple size="3">
+                            <option value="new">New</option>
+                            <option value="used">Used</option>
+                            <option value="popular">Popular</option>
+                        </select>
+                    </div>
                 </fieldset>
-                
-                
-                <div>
-                    <label for="product-photo">Product photo</label>
-                    <input type="file" id="product-photo" name="product_photo" placeholder="Product photo" value="Wybierz plik">
-                </div>
 
-                <div>
-                    <label for="purchased-date">Purchased date</label>
-                    <input type="date" id="purchased-date" name="purchased_date" placeholder="Purchased date">
-                </div>
+                <fieldset>
+                    <legend>Action</legend>
+                    <div style="display: flex; gap: 16px;">
+                        <div>
+                            <button type="reset">Reset</button>
+                        </div>
 
-                <div>
-                    <label for="tags">Tags:</label>
-                    <select id="tags" name="tags" multiple size="3">
-                        <option value="new">New</option>
-                        <option value="used">Used</option>
-                        <option value="popular">Popular</option>
-                    </select>
-                </div>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
 
-                <div style="display: flex; gap: 16px;">
-                    <div>
-                        <button type="reset">Reset</button>
+                        <div>
+                            <input type="button" id="save-draft" name="save_draft" placeholder="Save draft" value="Save draft">
+                        </div>
                     </div>
-
-                    <div>
-                        <button type="submit">Submit</button>
-                    </div>
-
-                    <div>
-                        <input type="button" id="save-draft" name="save_draft" placeholder="Save draft" value="Save draft">
-                    </div>
-                </div>
+                </fieldset>
             </form>
         </main>
     </body>
