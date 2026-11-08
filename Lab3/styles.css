@@ -57,3 +57,19 @@ body {
     bottom: 1rem;
     left: 1rem;
 }
+
+/* Now lets handle some site design */
+/* Starting off with the navigation */
+.page-nav {
+    padding: 0.5rem; /* space between text and border */
+    border-bottom: 1px solid black;
+}
+
+/* Now the menu */
+.menu {
+    /* WSZYSKO MUSI BYC!!!! */
+    display: inline-block;     /* without it we got one massive site-lenght block */
+    padding: 0.5rem;          /* without it we got it squeezed around the text */
+    border: 1px solid black; /* without it we got border size 0px - no border */
+    border-radius: 0.75rem; /* and without it we got no curves around the border - we got a basic rectangle */
+}
