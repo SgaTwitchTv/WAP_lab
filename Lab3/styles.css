@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: white;
+}
+
+/* COMMON MAIN */
+.container {
+  border: 0.07rem solid black;
+  border-radius: 1rem;
+
+  padding-inline: 2rem;
+  padding-block: 1rem;
+
+  margin-inline: auto;
+  width: 60%;
+
+  overflow-wrap: anywhere;
+}
+
