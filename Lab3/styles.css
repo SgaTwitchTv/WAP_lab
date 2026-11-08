@@ -112,3 +112,23 @@ body {
 .menu--side .menu__submenu {
     flex-direction: column;
 }
+
+/* Some editing and merging the menu into the navbar line */
+/* Here we make the Resource box the reference point for the dropdown */
+.menu {
+    position: relative;
+}
+
+.menu .menu__submenu {
+    display: name;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    background-color white;
+}
+
+.menu:hover .menu__submenu {
+    display: flex;
+    flex-direction: column;
+}
