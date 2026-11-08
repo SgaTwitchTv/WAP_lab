@@ -74,6 +74,16 @@ body {
     border-radius: 0.75rem; /* and without it we got no curves around the border - we got a basic rectangle */
 }
 
+.menu--flex-row,
+.menu--stacked,
+.menu--side {
+    display: inline-flex;
+}
+
+.menu--wide {
+    display: flex;
+}
+
 .menu__submenu {
     display: block;
 }
