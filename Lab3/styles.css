@@ -73,3 +73,42 @@ body {
     border: 1px solid black; /* without it we got border size 0px - no border */
     border-radius: 0.75rem; /* and without it we got no curves around the border - we got a basic rectangle */
 }
+
+.menu__submenu {
+    display: block;
+}
+
+.menu__submenu a {
+    display: inline-block;
+}
+
+/* The submenu is being placed below or beside the Resources label */
+.menu--flex-row,
+.menu--stacked,
+.menu--wide {
+    flex-direction: column;
+}
+
+.menu--side {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+/* Lets arrange the links in the submenu */
+.menu--flex-row .menu__submenu,
+.menu--stacked .menu__submenu,
+.menu--wide .menu__submenu,
+.menu--side .menu__submenu {
+    display: flex;
+}
+
+.menu--flex-row .menu__submenu {
+    gap: 0.5rem;
+}
+
+.menu--stacked .menu__submenu,
+.menu--wide .menu__submenu,
+.menu--side .menu__submenu {
+    flex-direction: column;
+}
