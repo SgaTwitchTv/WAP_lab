@@ -74,16 +74,6 @@ body {
     border-radius: 0.75rem; /* and without it we got no curves around the border - we got a basic rectangle */
 }
 
-.menu--flex-row,
-.menu--stacked,
-.menu--side {
-    display: inline-flex;
-}
-
-.menu--wide {
-    display: flex;
-}
-
 .menu__submenu {
     display: block;
 }
@@ -129,16 +119,23 @@ body {
     position: relative;
 }
 
+/* it is just like:*/
+/* overwrite class (dot sign) menu__submenu, which is somewhere in the menu class */
 .menu .menu__submenu {
-    display: name;
+    display: none;  /* dafaultly: if cursor not on the resources field - then do not show that */
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1;
-    background-color white;
+    background-color: white;
 }
 
+/* hover selector means when mouse is on the menu (resources) field */
+/* and here we handle what to do if it happens */
 .menu:hover .menu__submenu {
     display: flex;
     flex-direction: column;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 0.75rem;
 }
