@@ -29,3 +29,25 @@ body {
   overflow-wrap: anywhere;
 }
 
+/* Here we go on with sticky element */
+
+#books > h3, /* we select an element with id "books" and ">" selects a direct child (here the header h3) */
+#web > h3 { /* here analogously */
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+/* Here after targetting - selecting - the books we handle the case of what is going on after that */
+#books:target,
+#web:target {
+    background-color: #fff8cc;
+}
+/* After clicking the section the url ends in #books */
+
+/* Here we select the heading inside that section */
+#books:target > h1,
+#web:target > h3 {
+    background-color: inherit;
+}
+/* Without that the sticky heading of Books stays white after clicking it */
