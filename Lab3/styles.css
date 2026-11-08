@@ -30,7 +30,6 @@ body {
 }
 
 /* Here we go on with sticky element */
-
 #books > h3, /* we select an element with id "books" and ">" selects a direct child (here the header h3) */
 #web > h3 { /* here analogously */
     position: sticky;
@@ -46,8 +45,15 @@ body {
 /* After clicking the section the url ends in #books */
 
 /* Here we select the heading inside that section */
-#books:target > h1,
+#books:target > h3,
 #web:target > h3 {
     background-color: inherit;
 }
 /* Without that the sticky heading of Books stays white after clicking it */
+
+/* Now its time for the go-top link */
+.go-top {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+}
