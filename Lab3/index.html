@@ -103,40 +103,42 @@
       </p>
     </section>
 
-    <section if="signin" class="sign">
-      <form method="post" enctype="multipart/form-data" class="formy">
-        <fieldset>
-          <div class="form-title">
-             <h2>Sign in</h2>
-          </div>
+    <section id="signin" class="sign">
+      <div class="container">
+        <form method="post" enctype="multipart/form-data" class="formy">
+          <fieldset class="form-panel">
+            <div class="form-title">
+              <h2>Sign in</h2>
+            </div>
 
-          <div class="form-row">
-            <label for="full-name">Full name:</label>
-            <input type="text" id="full-name" name="full_name" placeholder="Input name">
-          </div>
+            <div class="form-row">
+              <label for="full-name">Full name:</label>
+              <input type="text" id="full-name" name="full_name" placeholder="Input name">
+            </div>
 
-          <div class="form-row">
-            <label for="user-email">Email address:</label>
-            <input type="email" id="user-email" name="user_email" placeholder="e.g. kowalski@example.com">
-          </div>
+            <div class="form-row">
+              <label for="user-email">Email address:</label>
+              <input type="email" id="user-email" name="user_email" placeholder="e.g. kowalski@example.com">
+            </div>
 
-          <div class="form-row">
-            <label for="phone-number">Phone number:</label>
-            <input type="tel" id="phone-number" name="phone_number" placeholder="+48 694 202 137">
-          </div>
+            <div class="form-row">
+              <label for="phone-number">Phone number:</label>
+              <input type="tel" id="phone-number" name="phone_number" placeholder="+48 694 202 137">
+            </div>
 
-          <div class="form-row">
-            <label for="user-password">Password:</label>
-            <input type="password" id="user-password" name="user_password" placeholder="e.g. ********">
-          </div>
+            <div class="form-row">
+              <label for="user-password">Password:</label>
+              <input type="password" id="user-password" name="user_password" placeholder="e.g. ********">
+            </div>
 
-          <div class="buttons-row">
-            <button type="log-in">Log in</button>
-            <button type="sign-in">Sign in</button>
-            <button type="start-over">Start over</button>
-          </div>
-        </fieldset>
-      </form>
+            <div class="buttons-row">
+              <button type="log-in">Log in</button>
+              <button type="sign-in">Sign in</button>
+              <button type="start-over">Start over</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </section>
 
   </article>
