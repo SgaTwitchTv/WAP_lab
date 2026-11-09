@@ -156,25 +156,15 @@ body {
     margin-bottom: 0.75px; /* gaps between text */
 }
 
+/* The form css */
 .formy {
-    display: inline-block;
-    border-radius: 0.75rem;
+    display: block;
 }
 
-.form-title {
-    text-align: center;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.buttons-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 0.5rem;
+/* and its panel */
+.form-panel {
+    min-inline-size: 0;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
 }
