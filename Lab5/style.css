@@ -1,0 +1,81 @@
+/* ---------------------------------------------------
+   RESET & GLOBALS
+------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: white;
+}
+
+/* ---------------------------------------------------
+   FORM
+------------------------------------------------------ */
+.page-signin main{ 
+    width: clamp(20rem,60%, 70rem);
+    margin: 2rem auto;
+   }
+
+.page-signin form {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 0;
+  gap: 0.5rem 0.3rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.page-signin form h1 {
+  margin: 0;
+  grid-column: 1 / -1;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.page-signin label { 
+  margin: 0; 
+  align-self: center;
+  text-align: left;
+}
+
+.page-signin input {
+  margin: 0; 
+  grid-column: 2 / -1;
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 0.5rem;
+}
+
+.page-signin .buttons-layout {
+  grid-column: 1 / -1;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;  
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.page-signin .valid{
+  color: green;
+  border-color: green;
+}
+
+.page-signin .invalid{
+  color: red;
+  border-color: red;
+}

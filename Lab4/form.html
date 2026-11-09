@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign in!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-signin" id="top">
+
+    <!-- NAVIGATION -->
+  <nav class="page-nav">
+   
+
+    <div class="menu">
+      <span>Resources ►</span>
+
+      <div class="menu__submenu">
+        <a href="index.html">Home</a>
+        
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+
+      <form>
+        <h1>Sign in!</h1>
+
+        <label for="name">Full name:</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="e.g. John Kowalski"
+          minlength="5"
+          maxlength="30"
+          value="John"
+          autofocus
+          autocomplete="name">
+
+        <label for="email">Email address:</label>
+        <input
+          id="email"
+          name="user_email"
+          type="email"
+          placeholder="e.g. kowalski@example.com"
+          maxlength="100">
+
+        <label for="phone">Phone number:</label>
+        <input
+          id="phone"
+          name="user_phone"
+          type="tel"
+          placeholder="+48 123 456 789"
+          minlength="9"
+          maxlength="15">
+
+        <label for="password">Password:</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}$"
+          placeholder="Min. 8 characters"
+          title="My password error"
+          required>
+
+        <div class="buttons-layout">
+          <button type="submit">Log in</button>
+          <button type="submit">Sign in</button>
+          <button type="reset">Start over</button>
+        </div>
+      </form>
+
+  </main>
+
+</body>
+</html>
