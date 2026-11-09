@@ -144,3 +144,18 @@ body {
     border-top-color: transparent;
     border-bottom-color: transparent;
 } 
+
+/* The image layout and merging it into the text */
+.web-intro-image {
+    float: left; /* the way how text starts from the top of the image */
+    width: 50px;    /* image size */
+    margin: 0 0.75rem 0.25rem 0; /* distance of text from the image */
+}
+
+#web p {
+    margin-bottom: 0.75px; /* gaps between text */
+}
+
+.sign {
+    display: inline-flex;
+}
