@@ -104,8 +104,12 @@
     </section>
 
     <section if="signin" class="sign">
-      <form method="post" enctype="multipart/form-data">
+      <form method="post" enctype="multipart/form-data" class="formy">
         <fieldset>
+          <div class="form-title">
+             <h2>Sign in</h2>
+          </div>
+
           <div class="form-row">
             <label for="full-name">Full name:</label>
             <input type="text" id="full-name" name="full_name" placeholder="Input name">
@@ -125,18 +129,10 @@
             <label for="user-password">Password:</label>
             <input type="password" id="user-password" name="user_password" placeholder="e.g. ********">
           </div>
-        </fieldset>
 
-        <fieldset>
           <div class="buttons-row">
             <button type="log-in">Log in</button>
-          </div>
-
-          <div class="buttons-row">
             <button type="sign-in">Sign in</button>
-          </div>
-
-          <div class="buttons-row">
             <button type="start-over">Start over</button>
           </div>
         </fieldset>

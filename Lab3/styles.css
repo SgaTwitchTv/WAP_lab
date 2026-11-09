@@ -156,6 +156,15 @@ body {
     margin-bottom: 0.75px; /* gaps between text */
 }
 
+.formy {
+    display: inline-block;
+    border-radius: 0.75rem;
+}
+
+.form-title {
+    text-align: center;
+}
+
 .form-row {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -166,5 +175,6 @@ body {
 .buttons-row {
     display: flex;
     flex-direction: row;
-    align-items: right;
+    justify-content: flex-end;
+    gap: 0.5rem;
 }
