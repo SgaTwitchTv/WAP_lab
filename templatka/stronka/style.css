@@ -47,7 +47,7 @@ a {
 /* FIND: NAV LINK / DESCENDANT SELECTOR
    Matches <a> elements inside <nav>. This selector is more specific than a. */
 nav a {
-    color: #17365d;
+    color: #f71096;
     text-decoration: none;
 }
 
@@ -62,4 +62,144 @@ nav a:hover {
 nav a:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 3px;
+}
+
+/* FIND: HEADER / LAYERED BACKGROUND
+   The first layer is painted on top of the image. */
+header#top { /* FIND: SELECTOR — matches a <header> with id="top". */
+    background-color: #17365d; /* FIND: BACKGROUND COLOR — solid base beneath the layers. */
+    background-image: /* FIND: BACKGROUND LAYERS — the first layer is painted on top. */
+        linear-gradient(to right, rgba(23, 54, 93, 0.95), rgba(23, 54, 93, 0.7)), /* FIND: GRADIENT — dark blue at 95% opacity on the left, fading to 70% on the right. */
+        url("header.png"); /* FIND: IMAGE PATH — loads header.png from the same folder as this CSS file. */
+    background-position: center; /* FIND: POSITION — centers each background layer in the header. */
+    background-size: cover; /* FIND: SIZE — fills the header and can crop the image to fit. */
+    background-repeat: no-repeat; /* FIND: REPEAT — keeps the background from tiling. */
+    padding-block: 4vh; /* FIND: VERTICAL PADDING — adds 4% of the viewport height at the top and bottom. */
+    padding-inline: 4vw; /* FIND: HORIZONTAL PADDING — adds 4% of the viewport width on the left and right. */
+    color: pink; /* FIND: TEXT COLOR — sets the header text color for elements that inherit it. */
+} 
+
+/* FIND: HEADER NAV / LINK COLOR
+   Links have their own color rules, so set their color here too. 
+header#top nav a {
+    color: pink;
+}
+*/
+
+/* FIND: POSITION STICKY / SECTION HEADINGS */
+#resources > h2, #images > h2 {
+    position: sticky;        /* Stays within its own section. */
+    top: 0;                  /* Sticks when it reaches the top edge. */
+    background-color: white; /* Keeps scrolling text from showing through. */
+}
+
+/* FIND: POSITION FIXED / BACK TO TOP */
+.go-top {
+    position: fixed; /* Anchors the link to the browser window. */
+    bottom: 1rem;    /* Leaves space below the link. */
+    left: 1rem;      /* Leaves space to its left. */
+}
+
+/* FIND: DROPDOWN MENU / POSITIONING */
+.menu {
+    display: inline-block; /* Keeps Resources beside the other nav links. */
+    position: relative; /* Gives the submenu a reference box. */
+}
+
+/* FIND: DROPDOWN SUBMENU / HIDDEN STATE */
+.menu_submenu {
+    display: none;           /* Hides the submenu by default. */
+    position: absolute;      /* Lets it open without pushing the page down. */
+    top: 100%;               /* Starts it just below Resources. */
+    left: 0;                 /* Lines up the left edges. */
+    z-index: 2;              /* Keeps it above the content below. */
+    background-color: white;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+/* FIND: DROPDOWN SUBMENU / HOVER AND KEYBOARD FOCUS */
+.menu:hover .menu_submenu, .menu:focus-within .menu_submenu {
+    display: flex;           /* Shows the submenu. */
+    flex-direction: column;  /* Stacks About and Images. */
+}
+
+/* FIND: DROPDOWN LINK COLOR / WHITE BACKGROUND */
+#top .menu_submenu a {
+    color: #17365d;
+}
+
+/* FIND: FLOAT LEFT / WRAP TEXT */
+.float-demo {
+    float: left;             /* Lets text wrap to the right of the image. */
+    width: 4rem;
+    margin-right: 0.75rem;    /* Leaves space between the image and the text. */
+    max-width: 100%;
+    height: auto;
+}
+
+/* FIND: CLEAR LEFT / START BELOW THE FLOAT */
+.clear-demo {
+    clear: left;             /* Starts this paragraph below the floated image. */
+}
+
+/* FIND: FORM CONTAINER / CENTERED PANEL */
+.container {
+    box-sizing: border-box; /* Includes padding and border in the width. */
+    width: 90%;
+    max-width: 48rem;
+    margin: 2rem auto;     /* Adds vertical space and centers horizontally. */
+    padding: 2rem;  /* distance from sides */
+    border: 1px solid #17365d;
+    border-radius: 1rem;
+}
+
+/* FIND: FORM FIELDSET / SPACING */
+form fieldset {
+    min-inline-size: 0;    /* Lets the fieldset shrink with the panel. */
+    margin: 0 0 1rem;
+    padding: 1rem;
+}
+
+/* FIND: FORM ROW / GRID COLUMNS */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 2fr);
+    align-items: center;   /* Centers the label vertically beside its field. */
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* FIND: FORM OUTPUT / GRID COLUMN */
+.form-row > output {
+    grid-column: 2;        /* Puts the budget readout below the slider. */
+}
+
+/* FIND: FORM BUTTONS / FLEXBOX */
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+/* FIND: RESPONSIVE FORM / NARROW SCREEN */
+@media (width < 650px) {
+    .form-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .form-row > output {
+        grid-column: 1;
+    }
+
+    .form-actions {
+        justify-content: center;
+    }
+}
+
+/* FIND: CHECKBOX AND RADIO / INLINE CHOICES */
+.form-row--choice {
+    display: flex;
+    align-items: center;
 }

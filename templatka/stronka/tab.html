@@ -25,11 +25,19 @@
             <!-- FIND: NAVIGATION: groups the links used to move around the page. -->
             <nav>
                 <!-- FIND: LINK / SAME-PAGE ANCHOR: href=#resources jumps to the element with id=resources. -->
-                <a href="#resources">Resources</a>
-                <a href="#about">About</a>
-                <a href="#images">Images</a>
-                <a href="#table">Table</a>
-                <a href="#product-form">Product form</a>
+                <div class="menu">
+                    <a href="#resources">Resources</a>
+
+                    <div class="menu_submenu">
+                        <a href ="#about">About</a>
+                        <a href="#images">Images</a>
+                    </div>
+                    
+                    <div class="menu_submenu">
+                        <a href="#table">Table</a>
+                        <a href="#product-form">Product form</a>
+                    </div>
+                </div>
             </nav>
         </header>
 
@@ -50,6 +58,16 @@
                     9. Inspect only files relevant to the current task.
                     10. Do not repeated ly rescan the entire repository.
                 </p>
+                
+                <!-- FIND: FLOAT / IMAGE WITH WRAPPING TEXT -->
+                <p>
+                    <img class="float-demo" src="header.png" alt="">
+                    HTML gives the page its structure. CSS lets you place an image at the
+                    edge of a paragraph so the text wraps beside it and then continues
+                    across the full width below it.
+                </p>
+
+                <p class="clear-demo">This paragraph starts below the image.</p>
 
                 <h3>Books</h3>
                 <!-- FIND: LIST / UNORDERED: ul contains li items when their order is unimportant. -->
@@ -179,7 +197,7 @@
         <!-- FIND: FOOTER: contains page-end content and links. -->
         <footer>
             <!-- FIND: LINK / BACK TO TOP: #top targets the header on this page. -->
-            <a href="#top">Back to top</a>
+            <a href="#top" class="go-top">Back to top</a>
             <!-- FIND: COPYRIGHT SYMBOL: the literal character is saved as UTF-8. -->
             <p>© 2025 Web Programming Course</p>
         </footer>

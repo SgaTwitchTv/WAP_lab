@@ -1,1 +1,58 @@
-/* FIND: FORM STYLESHEET: form.html loads this file. Add the form styles here when you start the CSS exercises. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* FIND: RESET BUTTON / TRANSITION */
+.form-actions button[type="reset"] {
+    border: 1px solid #17365d;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* FIND: RESET BUTTON / HOVER SCALE */
+.form-actions button[type="reset"]:hover {
+    transform: scale(1.1); /* Makes the button appear 10% larger. */
+    border-color: red;
+}
+
+/* FIND: SUBMIT BUTTON / PULSE ANIMATION */
+.submit-button {
+    animation: submit-pulse 0.8s ease-in-out infinite alternate;
+}
+
+/* FIND: KEYFRAMES / PULSE SIZE */
+@keyframes submit-pulse {
+    from { transform: scale(1); }
+    to   { transform: scale(1.1); }
+}
+
+/* FIND: RESET BUTTON / HOVER TRANSITION */
+.form-actions button[type="reset"] {
+    border: 1px solid #17365d;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* FIND: RESET BUTTON / HOVER TRANSITION */
+.form-actions button[type="reset"]:hover {
+    transform: scale(1.1);
+    border-color: red;
+}
+
+/* FIND: SUBMIT BUTTON / PULSE */
+.submit-button {
+    animation: submit-pulse 1.6s ease-in-out infinite;
+}
+
+/* FIND: KEYFRAMES / GROW AND SHRINK */
+@keyframes submit-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
