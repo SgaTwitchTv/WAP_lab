@@ -1,22 +1,65 @@
+/* FIND: RESET / UNIVERSAL SELECTOR: * matches elements. ::before and ::after also cover generated boxes. */
 *,
 *::before,
 *::after {
+  /* FIND: BOX SIZING: border-box includes padding and border in a declared width or height. */
   box-sizing: border-box;
+  /* FIND: MARGIN / PADDING RESET: margin is outside the box and padding is inside it. */
   margin: 0;
   padding: 0;
 }
 
+/* FIND: FONT / ROOT SIZE: the browser tries the fonts in order. rem lengths use the root font size. */
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
+/* FIND: CLASS SELECTOR / LINK BUTTON: .form-link matches class=form-link in the home HTML. */
 .form-link {
+    /* FIND: DISPLAY INLINE-BLOCK: keeps the link inline while giving it a box that can be sized and padded. */
     display: inline-block;
+    /* FIND: PADDING / REM: two values set vertical and horizontal padding in that order. */
     padding: 0.5rem 1rem;
+    /* FIND: BORDER / BORDER RADIUS: set the outline and round the corners. */
     border: 1px solid #17365d;
     border-radius: 0.5rem;
+    /* FIND: BACKGROUND COLOR / TEXT COLOR: style the fill and text separately. */
     background-color: #17365d;
     color: white;
+    /* FIND: TEXT DECORATION: none removes the link underline. */
     text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 60rem;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
+/* FIND: LINK / BASE STYLE
+   Matches every <a> on the page. */
+a {
+    color: #f71096;
+}
+
+/* FIND: NAV LINK / DESCENDANT SELECTOR
+   Matches <a> elements inside <nav>. This selector is more specific than a. */
+nav a {
+    color: #17365d;
+    text-decoration: none;
+}
+
+/* FIND: NAV LINK / HOVER
+   Applies while the pointer is over a navigation link. */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* FIND: NAV LINK / KEYBOARD FOCUS
+   Shows an outline when the browser indicates focus, such as after Tab. */
+nav a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
 }

@@ -1,18 +1,30 @@
+<!-- FIND: DOCUMENT TYPE / DOCTYPE: enables standards mode. -->
 <!DOCTYPE html>
+<!-- FIND: DOCUMENT LANGUAGE / LANG: identifies the page language. -->
 <html lang="en">
+    <!-- FIND: HEAD / METADATA: contains encoding, viewport, tab title, and linked resources. -->
     <head>
+        <!-- FIND: CHARSET: UTF-8 tells the browser how to decode the file. -->
         <meta charset="UTF-8">
+        <!-- FIND: VIEWPORT: allows layouts to use the device width. -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FIND: PAGE TITLE: sets the name shown in the browser tab. -->
         <title>Web Programming Course</title>
 
+        <!-- FIND: STYLESHEET LINK: href points to the CSS file beside this HTML file. -->
         <link rel="stylesheet" href="style.css">
     </head>
     
+    <!-- FIND: BODY: holds the page content. -->
     <body>
+        <!-- FIND: HEADER / TOP ANCHOR: id=top is the destination for the back-to-top link. -->
         <header id="top">
+            <!-- FIND: HEADING H1: the main page title. Use h2 for sections and h3 for their subsections. -->
             <h1>Web Programming Course</h1>
             
+            <!-- FIND: NAVIGATION: groups the links used to move around the page. -->
             <nav>
+                <!-- FIND: LINK / SAME-PAGE ANCHOR: href=#resources jumps to the element with id=resources. -->
                 <a href="#resources">Resources</a>
                 <a href="#about">About</a>
                 <a href="#images">Images</a>
@@ -21,9 +33,12 @@
             </nav>
         </header>
 
-        <main>
+        <!-- FIND: MAIN: contains the primary content. -->
+        <main class="container">
+            <!-- FIND: SECTION / RESOURCES: groups related content and provides a link target. -->
             <section id="resources">
                 <h2>jazdazkurwami zrozjebusami</h2>
+                <!-- FIND: PARAGRAPH: p groups prose. Source line breaks usually collapse to spaces. -->
                 <p>1. Follow the architectural decisions in this document.
                     2. Do not compare ten alternative frameworks if one has already been selected.
                     3. Do not redesign future milestones while implementing the current one.
@@ -37,6 +52,7 @@
                 </p>
 
                 <h3>Books</h3>
+                <!-- FIND: LIST / UNORDERED: ul contains li items when their order is unimportant. -->
                 <ul>
                     <li>find the first milestone that is not marked complete</li>
                     <li>find the first milestone that is not marked complete</li>
@@ -46,8 +62,10 @@
                 </ul>
 
                 <h3>Web resources</h3>
+                <!-- FIND: LIST / ORDERED: ol contains li items with automatic numbering. -->
                 <ol>
                     <li>
+                        <!-- FIND: LINK / EXTERNAL URL: a complete https URL points to another site. -->
                         <a href="https://github.com/SgaTwitchTv/WAP_lab">Resources</a>
                     </li>
                     <li>
@@ -59,39 +77,52 @@
                 </ol> 
             </section>
             
+            <!-- FIND: SECTION / ABOUT: id=about is the navigation target. -->
             <section id="about">
                 <h2>About this course</h2>
                 <p>jekiesgadane. soujuz niruszymej riespublik swabodnej.</p>
             </section>
 
+            <!-- FIND: SECTION / IMAGES: examples of local and remote image sources. -->
             <section id="images">
                 <h2>
                     Images in Web Dev
                 </h2>
                 <p>
                     Rakieta
+                    <!-- FIND: LINK / CLICKABLE IMAGE: the enclosing anchor decides where the image click goes. -->
                     <a href="task1.html">
+                        <!-- FIND: IMAGE / LOCAL FILE: src is relative to this HTML file. alt provides a text alternative. width and height set dimensions. -->
                         <img src="2026-10-27 17_37_33-Untitled 1 - QCAD.png" alt="bomba" width="100" height="67"> 
                     </a>
                     tego typu
                 </p>
                 <p>
+                    <!-- FIND: IMAGE / REMOTE URL: src can be a full URL to the image. -->
                     <img src="https://img.magnific.com/premium-vector/girl-sliding-down-slide-children-s-playground-vector-illustration_723224-2171.jpg?w=2000" height="100">
+                    <!-- FIND: LINE BREAK / BR: starts a new line within the current paragraph. -->
                     <br>
                     to mialo byc logo skidsnslides w necie xd
                 </p>
             </section>
 
+            <!-- FIND: SECTION / TABLE: id=table is the navigation target. -->
             <section id="table">
+                <!-- FIND: TABLE: caption and column definitions come before the row groups. -->
                 <table>
+                    <!-- FIND: TABLE CAPTION: names the entire table. -->
                     <caption>Table 1 - Simple table</caption>
 
+                    <!-- FIND: TABLE COLGROUP / COL SPAN: defines a group of four columns for styling. -->
                     <colgroup>
                         <col span="4">
                     </colgroup>
 
+                    <!-- FIND: TABLE THEAD: groups the header rows. -->
                     <thead>
+                        <!-- FIND: TABLE ROW / TR: groups the cells of one row. -->
                         <tr>
+                            <!-- FIND: TABLE HEADER CELL / TH: scope=col associates this heading with its column. -->
                             <th scope="col">Coulum 1</th>
                             <th scope="col">Coulum 2</th>
                             <th scope="col">Coulum 3</th>
@@ -99,14 +130,18 @@
                         </tr>
                     </thead>
 
+                    <!-- FIND: TABLE TBODY: groups the data rows. -->
                     <tbody>
                         <tr>
+                            <!-- FIND: TABLE DATA CELL / TD: contains ordinary row data. -->
                             <td>Cell 11</td>
+                            <!-- FIND: TABLE MERGED CELL / COLSPAN / ROWSPAN: this cell occupies three columns and two rows. -->
                             <td colspan="3" rowspan="2">
                                 <img src="https://www.mchtr.pw.edu.pl/var/www_mchtr/storage/images/witamy/47118-4-pol-PL/Witamy.jpg" width="200" height="80">
                             </td>
                         </tr>
 
+                        <!-- FIND: TABLE ROW WITH ROWSPAN: the earlier cell already occupies columns two to four here. -->
                         <tr>
                             <td>Cell 21</td>
                         </tr>
@@ -119,25 +154,33 @@
                         </tr>
                     </tbody>
 
+                    <!-- FIND: TABLE TFOOT: groups the footer rows. -->
                     <tfoot>
                         <tr>
+                            <!-- FIND: TABLE FULL-WIDTH CELL / COLSPAN: spans all four columns. -->
                             <td colspan="4" rowspan="1">Foota</td>
                         </tr>
                     </tfoot>
                 </table>
             </section>
 
+            <!-- FIND: SECTION / PRODUCT FORM LINK: provides the home-page destination for the nav link. -->
             <section id="product-form">
                 <h1>Add a product</h1>
 
+                <!-- FIND: DIV / WRAPPER: groups the action link so CSS can position it as a unit. -->
                 <div class="form-actions">
+                    <!-- FIND: LINK / RELATIVE PATH / BUTTON STYLE: .. goes up to templatka before opening formik/form.html. -->
                     <a class="form-link" href="../formik/form.html">Open product form</a>
                 </div>
             </section>
         </main>
 
+        <!-- FIND: FOOTER: contains page-end content and links. -->
         <footer>
+            <!-- FIND: LINK / BACK TO TOP: #top targets the header on this page. -->
             <a href="#top">Back to top</a>
+            <!-- FIND: COPYRIGHT SYMBOL: the literal character is saved as UTF-8. -->
             <p>© 2025 Web Programming Course</p>
         </footer>
     </body>
