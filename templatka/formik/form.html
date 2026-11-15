@@ -1,87 +1,173 @@
+<!-- FIND: DOCUMENT TYPE (DOCTYPE): tells the browser to use standards mode. -->
 <!DOCTYPE html>
+<!-- FIND: DOCUMENT LANGUAGE (LANG): identifies the page language for browsers and assistive tools. -->
 <html lang="en">
+    <!-- FIND: HEAD: document metadata and linked resources. -->
     <head>
+        <!-- FIND: CHARACTER ENCODING (CHARSET): UTF-8 lets the browser decode the page text. -->
         <meta charset="UTF-8">
+        <!-- FIND: VIEWPORT: uses the device width so responsive CSS can work as intended. -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FIND: PAGE TITLE: appears in the browser tab. -->
         <title>Web Programming Course</title>
 
+        <!-- FIND: STYLESHEET LINK: this relative path loads style.css from the form's folder. -->
         <link rel="stylesheet" href="style.css">
     </head>
 
+    <!-- FIND: BODY: content displayed on the page. -->
     <body>
+        <!-- FIND: MAIN: wraps the primary content of this page. -->
         <main>
+            <!-- FIND: SECTION: groups the product form under its heading. -->
             <section id="product-form">
+                <!-- FIND: HEADING: use h1 for the page title and h2 for a section under it. -->
                 <h2>Add a product</h2>
+                <!-- FIND: FORM SUBMISSION: POST puts values in the request body. multipart/form-data supports files. Without action, the destination is this page's URL. -->
                 <form method="post" enctype="multipart/form-data">
+                    <!-- FIND: FIELDSET: groups related controls. LEGEND names the group. -->
                     <fieldset>
                         <legend>Personal information</legend>
+                        <!-- FIND: INPUT FIELD TEXT / FULL NAME: for matches id, name is the submission key, and placeholder is a hint. -->
                         <div class="form-row">
                             <label for="full-name">Full name:</label>
                             <input type="text" id="full-name" name="full_name" placeholder="Input a name" />
                         </div>
                             
+                        <!-- FIND: INPUT FIELD EMAIL: type=email checks the address format when a value is entered. -->
                         <div class="form-row">
                             <label for="user-email">Email:</label>
                             <input type="email" id="user-email" name="user_email" placeholder="Provide an email" />
                         </div>
-                            
+
+                        <!-- FIND: INPUT FIELD TEL / READONLY: value sets the default. readonly prevents edits and the value can still be submitted. -->
+                        <div class="form-row">
+                            <label for="dial-code">Dialing code</label>
+                            <input type="tel" id="dial-code" name="dial_code" value="+48" readonly>
+                        </div>
+
+                        <!-- FIND: INPUT FIELD TEL / PHONE NUMBER: type=tel can show a telephone keyboard on mobile. -->
                         <div class="form-row">
                             <label for="phone-number">Phone number:</label>
                             <input type="tel" id="phone-number" name="phone_number" placeholder="Input a phone number" />
                         </div>
 
+                        <!-- FIND: INPUT FIELD PASSWORD: type=password masks typed characters. -->
                         <div class="form-row">
                             <label for="user-password">Password:</label>
                             <input type="password" id="user-password" name="user_password" placeholder="Input a password" />
                         </div>
 
+                        <!-- FIND: INPUT FIELD CHECKBOX: starts unchecked. Checking it makes create_account=yes eligible for submission. -->
                         <div class="form-row">
                             <input type="checkbox" id="create-account" name="create_account" value="yes"/>
                             <label for="create-account">Create account</label>
                         </div>
                     </fieldset>
 
+                    <!-- FIND: FIELDSET WARRANTY: groups the two radio choices under one legend. -->
                     <fieldset>
                         <legend>The warranty options</legend>
+                        <!-- FIND: INPUT FIELD RADIO / DEFAULT CHOICE: both radios share a name. checked starts this option selected. -->
                         <div class="form-row">
                             <input type="radio" id="warranty-12" name="warranty_period" value="12" checked>
                             <label for="warranty-12">Warranty for 12 months</label>
                         </div>
 
+                        <!-- FIND: INPUT FIELD RADIO / ALTERNATIVE CHOICE: a different value identifies this choice in submitted data. -->
                         <div class="form-row">
                             <input type="radio" id="warranty-24" name="warranty_period" value="24">
                             <label for="warranty-24">Warranty for 24 months</label>
                         </div>
                     </fieldset>
 
+                    <!-- FIND: FIELDSET PRODUCT DETAILS: product choice, quantity, tags, budget, maker, description, and photo. -->
                     <fieldset>
                         <legend>Product details</legend>
+                        <!-- FIND: SELECT SINGLE / PRODUCT TYPE: the chosen option's value is submitted under product_type. -->
                         <div class="form-row">
                             <label for="product-type">Product type</label>
                             <select id="product-type" name="product_type">
+                                <!-- FIND: PLACEHOLDER OPTION: selected makes it the initial choice, disabled prevents choosing it again, and hidden hides it from the open list. -->
                                 <option value="" disabled selected hidden>Choose a product</option>
                                 
+                                <!-- FIND: OPTGROUP ELECTRONICS: label names the category. Each option has visible text and a submitted value. -->
                                 <optgroup label="Electronics">
                                     <option value="keyboard">Keyboard</option>
                                     <option value="monitor">Monitor</option>
                                 </optgroup>
 
+                                <!-- FIND: OPTGROUP ACCESSORIES: a second category within the same dropdown. -->
                                 <optgroup label="Accessories">
                                     <option value="mouse-pad">Mouse pad</option>
                                     <option value="laptop-stand">Laptop stand</option>
                                 </optgroup>
                             </select>
-                        </div>                        
+                        </div>              
+                        
+                        <!-- FIND: INPUT FIELD NUMBER / QUANTITY: min and max limit valid values, step sets the increment, value sets the default, and required rejects an empty field. -->
+                        <div class="form-row">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1" required>
+                        </div>
+
+                        <!-- FIND: SELECT MULTIPLE / TAGS: multiple allows several choices. size sets the visible rows. Selected values share the same submission name. -->
+                        <div class="form-row">
+                            <label for="tags">Tags</label>
+                            <select id="tags" name="tags" multiple size="3">
+                                <option value="gift">Gift</option>
+                                <option value="office">Office</option>
+                                <option value="gaming">Gaming</option>
+                            </select>
+                        </div>
+
+                        <!-- FIND: INPUT FIELD RANGE / BUDGET: min and max set the endpoints, step sets the increment, and value sets the initial position. -->
+                        <div class="form-row">
+                            <label for="budget">Budget in PLN</label>
+                            <input type="range" id="budget" name="budget" min="0" max="500" step="10" value="100">
+                            <!-- FIND: OUTPUT: for refers to the slider's id. JavaScript is needed to update this text as the slider moves. -->
+                            <output for="budget" id="budget-output">100 PLN</output>
+                        </div>
+
+                        <!-- FIND: INPUT FIELD TEXT / MAKER: list points to a datalist id. The user can choose a suggestion or type another value. -->
+                        <div class="form-row">
+                            <label for="maker">Maker</label>
+                            <input type="text" id="maker" name="maker"
+                                list="maker-options" placeholder="e.g. Logitech">
+
+                            <!-- FIND: DATALIST: its options provide suggestions for the associated input. -->
+                            <datalist id="maker-options">
+                                <option value="Logitech"></option>
+                                <option value="Samsung"></option>
+                                <option value="Dell"></option>
+                            </datalist>
+                        </div>
+
+                        <!-- FIND: TEXTAREA / DESCRIPTION: rows and cols set the initial size. maxlength limits the number of characters. -->
+                        <div class="form-row">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description"
+                                    rows="4" cols="30" maxlength="300"></textarea>
+                        </div>
+
+                        <!-- FIND: INPUT FIELD FILE / PHOTO: accept hints that the picker should offer images. The form encoding supports sending the file. -->
+                        <div class="form-row">
+                            <label for="product-photo">Product photo</label>
+                            <input type="file" id="product-photo" name="product_photo" accept="image/*">
+                        </div>
                     </fieldset>
 
+                    <!-- FIND: FIELDSET DELIVERY: groups the order date and shipping choice. -->
                     <fieldset>
                         <legend>Delivery</legend>
 
+                        <!-- FIND: INPUT FIELD DATE / ORDER DATE: min and max limit valid dates. Use YYYY-MM-DD for attribute values. -->
                         <div class="form-row">
                              <label for="order-date">Order date</label>
                             <input type="date" id="order-date" name="order_date" min="2026-11-01" max="2026-12-31">
                         </div>
 
+                        <!-- FIND: SELECT SINGLE / SHIPPING METHOD: the values 5 and 2 represent days for the later delivery calculation. -->
                         <div class="form-row">
                             <label for="shipping-method">Shipping method</label>
                             <select id="shipping-method" name="shipping_method">
@@ -90,11 +176,23 @@
                             </select>
                         </div>
                     </fieldset>
+
+                    <!-- FIND: FORM ACTIONS: one wrapper groups the buttons for layout. -->
+                    <div class="form-actions">
+                        <!-- FIND: BUTTON SUBMIT: validates the form and submits if validation passes. -->
+                        <button type="submit">Submit</button>
+                        <!-- FIND: BUTTON RESET: restores controls to their initial values. -->
+                        <button type="reset">Reset</button>
+                        <!-- FIND: BUTTON SAVE DRAFT / FORMNOVALIDATE: submits without browser validation for this button. -->
+                        <button type="submit" formnovalidate>Save draft</button>
+                    </div>
                 </form>
             </section>
 
+            <!-- FIND: RETURN LINK SECTION: groups navigation back to the home page. -->
             <section id="return-button">
                 <div class="return-actions">
+                    <!-- FIND: LINK / BACK TO HOME: .. goes up one folder before opening stronka/tab.html. -->
                     <a class="site-link" href="../stronka/tab.html">Back to the website</a>
                 </div>
             </section>
