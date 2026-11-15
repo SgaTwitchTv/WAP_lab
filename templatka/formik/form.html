@@ -73,6 +73,23 @@
                             </select>
                         </div>                        
                     </fieldset>
+
+                    <fieldset>
+                        <legend>Delivery</legend>
+
+                        <div class="form-row">
+                             <label for="order-date">Order date</label>
+                            <input type="date" id="order-date" name="order_date" min="2026-11-01" max="2026-12-31">
+                        </div>
+
+                        <div class="form-row">
+                            <label for="shipping-method">Shipping method</label>
+                            <select id="shipping-method" name="shipping_method">
+                                <option value="5">Standard (5 days)</option>
+                                <option value="2">Express (2 days)</option>
+                            </select>
+                        </div>
+                    </fieldset>
                 </form>
             </section>
 
