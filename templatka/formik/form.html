@@ -13,6 +13,9 @@
 
         <!-- FIND: STYLESHEET LINK: this relative path loads style.css from the form's folder. -->
         <link rel="stylesheet" href="style.css">
+
+        <!-- FIND: JAVASCRIPT / LINK THE FORM SCRIPT -->
+        <script src="script.js" defer></script>
     </head>
 
     <!-- FIND: BODY: content displayed on the page. -->
@@ -26,18 +29,18 @@
                 <!-- FIND: FORM SUBMISSION: POST puts values in the request body. multipart/form-data supports files. Without action, the destination is this page's URL. -->
                 <form method="post" enctype="multipart/form-data">
                     <!-- FIND: FIELDSET: groups related controls. LEGEND names the group. -->
-                    <fieldset>
+                    <fieldset class="pers-in">
                         <legend>Personal information</legend>
                         <!-- FIND: INPUT FIELD TEXT / FULL NAME: for matches id, name is the submission key, and placeholder is a hint. -->
                         <div class="form-row">
                             <label for="full-name">Full name:</label>
-                            <input type="text" id="full-name" name="full_name" placeholder="Input a name" />
+                            <input type="text" id="full-name" name="full_name" placeholder="Input a name" required/>
                         </div>
                             
                         <!-- FIND: INPUT FIELD EMAIL: type=email checks the address format when a value is entered. -->
                         <div class="form-row">
                             <label for="user-email">Email:</label>
-                            <input type="email" id="user-email" name="user_email" placeholder="Provide an email" />
+                            <input type="email" id="user-email" name="user_email" placeholder="Provide an email" required/>
                         </div>
 
                         <!-- FIND: INPUT FIELD TEL / READONLY: value sets the default. readonly prevents edits and the value can still be submitted. -->
@@ -55,7 +58,7 @@
                         <!-- FIND: INPUT FIELD PASSWORD: type=password masks typed characters. -->
                         <div class="form-row">
                             <label for="user-password">Password:</label>
-                            <input type="password" id="user-password" name="user_password" placeholder="Input a password" />
+                            <input type="password" id="user-password" name="user_password" placeholder="Input a password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}" title="Use 8 or more characters with an uppercase letter, a lowercase letter, and a digit."/>
                         </div>
 
                         <!-- FIND: INPUT FIELD CHECKBOX: starts unchecked. Checking it makes create_account=yes eligible for submission. -->
@@ -111,6 +114,10 @@
                             <input type="number" id="quantity" name="quantity" min="1" max="10" step="1" value="1" required>
                         </div>
 
+                        <div class="form-row">
+                            <p>Order total: <output id="order-total" for="product-type quantity">—</output></p>
+                        </div>
+
                         <!-- FIND: SELECT MULTIPLE / TAGS: multiple allows several choices. size sets the visible rows. Selected values share the same submission name. -->
                         <div class="form-row">
                             <label for="tags">Tags</label>
@@ -157,6 +164,11 @@
                         </div>
                     </fieldset>
 
+                    <!-- FIND: OUTPUT / ESTIMATED DELIVERY DATE -->
+                    <p>Estimated delivery:
+                        <output id="delivery-date" for="order-date shipping-method">—</output>
+                    </p>
+
                     <!-- FIND: FIELDSET DELIVERY: groups the order date and shipping choice. -->
                     <fieldset>
                         <legend>Delivery</legend>
@@ -176,6 +188,9 @@
                             </select>
                         </div>
                     </fieldset>
+
+                    <!-- FIND: OUTPUT / WARRANTY AND ACCOUNT SUMMARY -->
+                    <p>Your choices: <output id="choice-summary">12 months · No account</output></p>
 
                     <!-- FIND: FORM ACTIONS: one wrapper groups the buttons for layout. -->
                     <div class="form-actions">

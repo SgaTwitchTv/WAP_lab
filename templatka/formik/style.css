@@ -56,3 +56,10 @@ html {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.1); }
 }
+
+/* FIND: VALIDATION / FIELD AND LABEL COLORS */
+label.is-valid   { color: green; }
+input.is-valid   { border-color: green; }
+
+label.is-invalid { color: #b91c1c; }
+input.is-invalid { border-color: #b91c1c; }
